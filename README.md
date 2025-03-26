@@ -20,7 +20,7 @@ A powerful browser extension built with React that enhances your browsing experi
 1. Clone the repository:
 ```bash
 git clone https://github.com/Voxxyfy/Voxxyfy.git
-cd voxxyfy-extension
+cd Voxxyfy
 ```
 
 2. Install dependencies:
