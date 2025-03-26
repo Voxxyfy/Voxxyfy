@@ -1,4 +1,4 @@
-<img src="https://i.postimg.cc/76c4SzTh/hero.png" alt="Voxxyfy Hero Image" width="100%" />
+<img src=".github/assets/hero.png" alt="Voxxyfy Hero Image" width="100%" />
 
 # Voxxyfy Browser Extension
 
