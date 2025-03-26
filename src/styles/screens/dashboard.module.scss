@@ -1,0 +1,155 @@
+.container {
+  width: 100%;
+  height: 500px;
+  max-height: 500px;
+  background-color: #1f164120;
+  backdrop-filter: blur(10px);
+
+  .header {
+    width: 100%;
+    height: 40px;
+    background-color: #252525;
+    padding: 0 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logoContainer {
+      display: flex;
+      column-gap: 12px;
+      align-items: center;
+
+      .logo {
+        width: 16px;
+        height: 16px;
+      }
+
+      .logoText {
+        font-size: 14px;
+        color: #e1e1e1;
+        font-family: "OpenSans SemiBold";
+      }
+    }
+
+    .userMenu {
+      display: flex;
+      column-gap: 12px;
+      align-items: center;
+      position: relative;
+
+      .icon {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+      }
+
+      .logoutBtn {
+        font-family: "OpenSans SemiBold";
+        font-size: 14px;
+        color: #e1e1e1;
+        cursor: pointer;
+        position: absolute;
+        left: -50%;
+        bottom: -50px;
+        background-color: #252525;
+        padding: 8px 12px;
+        border-radius: 8px;
+        box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+        outline: none;
+        border: none;
+        -webkit-animation: scale-up-ver-top 0.4s
+          cubic-bezier(0.39, 0.575, 0.565, 1) both;
+        animation: scale-up-ver-top 0.4s cubic-bezier(0.39, 0.575, 0.565, 1)
+          both;
+      }
+    }
+  }
+
+  .content {
+    padding: 12px 18px;
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      margin-top: 14px;
+    }
+
+    .menuItemList {
+      margin-top: 16px;
+      display: flex;
+      flex-direction: column;
+      row-gap: 8px;
+    }
+
+    .switchWrapper {
+      display: flex;
+      flex-direction: column;
+      row-gap: 8px;
+      width: 100%;
+      height: 56px;
+      justify-content: center;
+    }
+
+    .crownWrapper {
+      width: 160px;
+      height: 56px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      column-gap: 8px;
+      border-left: 1px solid #2f2f2f;
+
+      .crownButton {
+        background-color: transparent;
+        outline: none;
+        border: none;
+        width: 24px;
+        height: 24px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 4px;
+        cursor: pointer;
+
+        .crownText {
+          font-family: "OpenSans Regular";
+          font-size: 14px;
+          color: #e1e1e1;
+        }
+      }
+    }
+  }
+}
+
+@-webkit-keyframes scale-up-ver-top {
+  0% {
+    -webkit-transform: scaleY(0.4);
+    transform: scaleY(0.4) translateX(-50%);
+    -webkit-transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1) translateX(-50%);
+    -webkit-transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
+  }
+}
+@keyframes scale-up-ver-top {
+  0% {
+    -webkit-transform: scaleY(0.4);
+    transform: scaleY(0.4) translateX(-50%);
+    -webkit-transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1) translateX(-50%);
+    -webkit-transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
+  }
+}

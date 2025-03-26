@@ -1,0 +1,8 @@
+{
+  "TELEGRAM": {
+    "inputElement": "#editable-message-text"
+  },
+  "TWITTER": {
+    "inputElement": "div[data-testid=\"dmComposerTextInput\"]"
+  }
+}

@@ -1,0 +1,13 @@
+#voxxyfy-extension {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  z-index: 999999999 !important;
+}
+
+.text-content {
+  transition: all 0.3s ease-in-out !important;
+}
+.blur {
+  filter: blur(2px) !important;
+}

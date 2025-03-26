@@ -1,0 +1,452 @@
+[
+  {
+    "value": "cs",
+    "label": " Czech",
+    "flag": "https://flagcdn.com/cz.svg"
+  },
+  {
+    "value": "nl",
+    "label": " Dutch",
+    "flag": "https://flagcdn.com/nl.svg"
+  },
+  {
+    "value": "en",
+    "label": " English",
+    "flag": "https://flagcdn.com/us.svg"
+  },
+  {
+    "value": "et",
+    "label": " Estonian",
+    "flag": "https://flagcdn.com/ee.svg"
+  },
+  {
+    "value": "fr",
+    "label": " French",
+    "flag": "https://flagcdn.com/fr.svg"
+  },
+  {
+    "value": "de",
+    "label": " German",
+    "flag": "https://flagcdn.com/de.svg"
+  },
+  {
+    "value": "el",
+    "label": " Greek",
+    "flag": "https://flagcdn.com/gr.svg"
+  },
+  {
+    "value": "hu",
+    "label": " Hungarian",
+    "flag": "https://flagcdn.com/hu.svg"
+  },
+  {
+    "value": "it",
+    "label": " Italian",
+    "flag": "https://flagcdn.com/it.svg"
+  },
+  {
+    "value": "lv",
+    "label": " Latvian",
+    "flag": "https://flagcdn.com/lv.svg"
+  },
+  {
+    "value": "pl",
+    "label": " Polish",
+    "flag": "https://flagcdn.com/pl.svg"
+  },
+  {
+    "value": "pt",
+    "label": " Portuguese",
+    "flag": "https://flagcdn.com/pt.svg"
+  },
+  {
+    "value": "ro",
+    "label": " Romanian",
+    "flag": "https://flagcdn.com/ro.svg"
+  },
+  {
+    "value": "ru",
+    "label": " Russian",
+    "flag": "https://flagcdn.com/ru.svg"
+  },
+  {
+    "value": "es",
+    "label": " Spanish",
+    "flag": "https://flagcdn.com/es.svg"
+  },
+  {
+    "value": "sv",
+    "label": " Swedish",
+    "flag": "https://flagcdn.com/se.svg"
+  },
+  {
+    "value": "tr",
+    "label": " Turkish",
+    "flag": "https://flagcdn.com/tr.svg"
+  },
+  {
+    "value": "af",
+    "label": " Afrikaans",
+    "flag": "https://flagcdn.com/za.svg"
+  },
+  {
+    "value": "sq",
+    "label": " Albanian",
+    "flag": "https://flagcdn.com/al.svg"
+  },
+  {
+    "value": "am",
+    "label": " Amharic",
+    "flag": "https://flagcdn.com/et.svg"
+  },
+  {
+    "value": "ar",
+    "label": " Arabic",
+    "flag": "https://flagcdn.com/sa.svg"
+  },
+  {
+    "value": "hy",
+    "label": " Armenian",
+    "flag": "https://flagcdn.com/am.svg"
+  },
+  {
+    "value": "as",
+    "label": " Assamese",
+    "flag": "https://flagcdn.com/in.svg"
+  },
+  {
+    "value": "ay",
+    "label": " Aymara",
+    "flag": "https://flagcdn.com/bo.svg"
+  },
+  {
+    "value": "az",
+    "label": " Azerbaijani",
+    "flag": "https://flagcdn.com/az.svg"
+  },
+  {
+    "value": "bm",
+    "label": " Bambara",
+    "flag": "https://flagcdn.com/ml.svg"
+  },
+  {
+    "value": "eu",
+    "label": " Basque",
+    "flag": "https://flagcdn.com/es.svg"
+  },
+  {
+    "value": "be",
+    "label": " Belarusian",
+    "flag": "https://flagcdn.com/by.svg"
+  },
+  {
+    "value": "bn",
+    "label": " Bengali",
+    "flag": "https://flagcdn.com/bd.svg"
+  },
+  {
+    "value": "bs",
+    "label": " Bosnian",
+    "flag": "https://flagcdn.com/ba.svg"
+  },
+  {
+    "value": "bg",
+    "label": " Bulgarian",
+    "flag": "https://flagcdn.com/bg.svg"
+  },
+  {
+    "value": "my",
+    "label": " Burmese",
+    "flag": "https://flagcdn.com/mm.svg"
+  },
+  {
+    "value": "ca",
+    "label": " Catalan",
+    "flag": "https://flagcdn.com/es.svg"
+  },
+  {
+    "value": "zh",
+    "label": " Chinese",
+    "flag": "https://flagcdn.com/cn.svg"
+  },
+  {
+    "value": "co",
+    "label": " Corsican",
+    "flag": "https://flagcdn.com/fr.svg"
+  },
+  {
+    "value": "hr",
+    "label": " Croatian",
+    "flag": "https://flagcdn.com/hr.svg"
+  },
+  {
+    "value": "da",
+    "label": " Danish",
+    "flag": "https://flagcdn.com/dk.svg"
+  },
+  {
+    "value": "dv",
+    "label": " Dhivehi",
+    "flag": "https://flagcdn.com/mv.svg"
+  },
+  {
+    "value": "eo",
+    "label": " Esperanto",
+    "flag": "https://flagcdn.com/un.svg"
+  },
+  {
+    "value": "ee",
+    "label": " Ewe",
+    "flag": "https://flagcdn.com/tg.svg"
+  },
+  {
+    "value": "tl",
+    "label": " Filipino",
+    "flag": "https://flagcdn.com/ph.svg"
+  },
+  {
+    "value": "fi",
+    "label": " Finnish",
+    "flag": "https://flagcdn.com/fi.svg"
+  },
+  {
+    "value": "fy",
+    "label": " Frisian",
+    "flag": "https://flagcdn.com/nl.svg"
+  },
+  {
+    "value": "gl",
+    "label": " Galician",
+    "flag": "https://flagcdn.com/es.svg"
+  },
+  {
+    "value": "ka",
+    "label": " Georgian",
+    "flag": "https://flagcdn.com/ge.svg"
+  },
+  {
+    "value": "gn",
+    "label": " Guarani",
+    "flag": "https://flagcdn.com/py.svg"
+  },
+  {
+    "value": "gu",
+    "label": " Gujarati",
+    "flag": "https://flagcdn.com/in.svg"
+  },
+  {
+    "value": "ht",
+    "label": " Haitian Creole",
+    "flag": "https://flagcdn.com/ht.svg"
+  },
+  {
+    "value": "ha",
+    "label": " Hausa",
+    "flag": "https://flagcdn.com/ng.svg"
+  },
+  {
+    "value": "iw",
+    "label": " Hebrew",
+    "flag": "https://flagcdn.com/il.svg"
+  },
+  {
+    "value": "hi",
+    "label": " Hindi",
+    "flag": "https://flagcdn.com/in.svg"
+  },
+  {
+    "value": "is",
+    "label": " Icelandic",
+    "flag": "https://flagcdn.com/is.svg"
+  },
+  {
+    "value": "ig",
+    "label": " Igbo",
+    "flag": "https://flagcdn.com/ng.svg"
+  },
+  {
+    "value": "id",
+    "label": " Indonesian",
+    "flag": "https://flagcdn.com/id.svg"
+  },
+  {
+    "value": "ga",
+    "label": " Irish",
+    "flag": "https://flagcdn.com/ie.svg"
+  },
+  {
+    "value": "ja",
+    "label": " Japanese",
+    "flag": "https://flagcdn.com/jp.svg"
+  },
+  {
+    "value": "jv",
+    "label": " Javanese",
+    "flag": "https://flagcdn.com/id.svg"
+  },
+  {
+    "value": "kn",
+    "label": " Kannada",
+    "flag": "https://flagcdn.com/in.svg"
+  },
+  {
+    "value": "kk",
+    "label": " Kazakh",
+    "flag": "https://flagcdn.com/kz.svg"
+  },
+  {
+    "value": "km",
+    "label": " Khmer",
+    "flag": "https://flagcdn.com/kh.svg"
+  },
+  {
+    "value": "rw",
+    "label": " Kinyarwanda",
+    "flag": "https://flagcdn.com/rw.svg"
+  },
+  {
+    "value": "ko",
+    "label": " Korean",
+    "flag": "https://flagcdn.com/kr.svg"
+  },
+  {
+    "value": "ku",
+    "label": " Kurdish",
+    "flag": "https://flagcdn.com/un.svg"
+  },
+  {
+    "value": "ky",
+    "label": " Kyrgyz",
+    "flag": "https://flagcdn.com/kg.svg"
+  },
+  {
+    "value": "lo",
+    "label": " Lao",
+    "flag": "https://flagcdn.com/la.svg"
+  },
+  {
+    "value": "la",
+    "label": " Latin",
+    "flag": "https://flagcdn.com/un.svg"
+  },
+  {
+    "value": "ln",
+    "label": " Lingala",
+    "flag": "https://flagcdn.com/cd.svg"
+  },
+  {
+    "value": "lt",
+    "label": " Lithuanian",
+    "flag": "https://flagcdn.com/lt.svg"
+  },
+  {
+    "value": "lg",
+    "label": " Luganda",
+    "flag": "https://flagcdn.com/ug.svg"
+  },
+  {
+    "value": "lb",
+    "label": " Luxembourgish",
+    "flag": "https://flagcdn.com/lu.svg"
+  },
+  {
+    "value": "mk",
+    "label": " Macedonian",
+    "flag": "https://flagcdn.com/mk.svg"
+  },
+  {
+    "value": "mg",
+    "label": " Malagasy",
+    "flag": "https://flagcdn.com/mg.svg"
+  },
+  {
+    "value": "ms",
+    "label": " Malay",
+    "flag": "https://flagcdn.com/my.svg"
+  },
+  {
+    "value": "ml",
+    "label": " Malayalam",
+    "flag": "https://flagcdn.com/in.svg"
+  },
+  {
+    "value": "mt",
+    "label": " Maltese",
+    "flag": "https://flagcdn.com/mt.svg"
+  },
+  {
+    "value": "mi",
+    "label": " Maori",
+    "flag": "https://flagcdn.com/nz.svg"
+  },
+  {
+    "value": "mr",
+    "label": " Marathi",
+    "flag": "https://flagcdn.com/in.svg"
+  },
+  {
+    "value": "mn",
+    "label": " Mongolian",
+    "flag": "https://flagcdn.com/mn.svg"
+  },
+  {
+    "value": "ne",
+    "label": " Nepali",
+    "flag": "https://flagcdn.com/np.svg"
+  },
+  {
+    "value": "no",
+    "label": " Norwegian",
+    "flag": "https://flagcdn.com/no.svg"
+  },
+  {
+    "value": "ny",
+    "label": " Nyanja",
+    "flag": "https://flagcdn.com/mw.svg"
+  },
+  {
+    "value": "or",
+    "label": " Odia",
+    "flag": "https://flagcdn.com/in.svg"
+  },
+  {
+    "value": "om",
+    "label": " Oromo",
+    "flag": "https://flagcdn.com/et.svg"
+  },
+  {
+    "value": "ps",
+    "label": " Pashto",
+    "flag": "https://flagcdn.com/af.svg"
+  },
+  {
+    "value": "fa",
+    "label": " Persian",
+    "flag": "https://flagcdn.com/ir.svg"
+  },
+  {
+    "value": "pa",
+    "label": " Punjabi",
+    "flag": "https://flagcdn.com/in.svg"
+  },
+  {
+    "value": "qu",
+    "label": " Quechua",
+    "flag": "https://flagcdn.com/pe.svg"
+  },
+  {
+    "value": "sm",
+    "label": " Samoan",
+    "flag": "https://flagcdn.com/ws.svg"
+  },
+  {
+    "value": "sa",
+    "label": " Sanskrit",
+    "flag": "https://flagcdn.com/in.svg"
+  },
+  {
+    "value": "gd",
+    "label": " Scots Gaelic",
+    "flag": "https://flagcdn.com/un.svg"
+  }
+]

@@ -1,0 +1,5 @@
+[
+  { "url": "web.telegram.org", "type": "TELEGRAM" },
+  { "url": "x.com", "type": "TWITTER" },
+  { "url": "web.whatsapp.com", "type": "WHATSAPP" }
+]
