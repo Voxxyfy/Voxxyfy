@@ -1,4 +1,4 @@
-[![hero.png](https://i.postimg.cc/76c4SzTh/hero.png)](https://postimg.cc/WFMxvh8c)
+<img src="https://i.postimg.cc/76c4SzTh/hero.png" alt="Voxxyfy Hero Image" width="100%" />
 
 # Voxxyfy Browser Extension
 
@@ -20,7 +20,7 @@ A powerful browser extension built with React that enhances your browsing experi
 1. Clone the repository:
 ```bash
 git clone https://github.com/Voxxyfy/Voxxyfy.git
-cd Voxxyfy
+cd voxxyfy-extension
 ```
 
 2. Install dependencies:
