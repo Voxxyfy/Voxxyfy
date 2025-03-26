@@ -1,0 +1,33 @@
+.button {
+  height: 36px;
+  margin-left: 10px;
+  background-color: transparent;
+  color: inherit;
+  border-radius: 20px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 15px;
+  font-family: TwitterChirp, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Helvetica, Arial, sans-serif;
+  border: 1px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:disabled {
+    opacity: 0.5;
+  }
+
+  .voxxyfyLogo {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+  }
+
+  .flag {
+    width: 20px;
+    height: auto;
+    margin-left: 2px;
+  }
+}

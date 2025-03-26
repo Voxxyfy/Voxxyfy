@@ -1,0 +1,44 @@
+.translateButtonContainer {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 2px;
+
+  .buttonWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0e0e0e;
+    border: 1px solid #262626;
+    border-radius: 6px;
+    min-width: 60px;
+    height: 30px;
+    border-radius: 360px;
+
+    .translateButton {
+      display: flex;
+      justify-content: center;
+      column-gap: 4px;
+      align-items: center;
+      background-color: transparent;
+      outline: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px 8px;
+      color: #c2c2c2;
+
+      .buttonIcon {
+        width: 18px;
+      }
+    }
+  }
+}
+
+.telegramTranslation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
