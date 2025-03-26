@@ -1,3 +1,5 @@
+<img src="https://i.postimg.cc/76c4SzTh/hero.png" alt="Voxxyfy Hero Image" width="100%" />
+
 # Voxxyfy Browser Extension
 
 A powerful browser extension built with React that enhances your browsing experience. Voxxyfy is designed to be lightweight, user-friendly, and customizable.
