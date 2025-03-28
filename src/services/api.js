@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { SERVER_URL } from '../config';
+import { getFromStorage } from '../controllers/storageController';
 
 // Create axios instance with default config
 const api = axios.create({
@@ -10,13 +11,10 @@ const api = axios.create({
 });
 
 // Add auth token to requests if available
-api.interceptors.request.use((config) => {
-  const userJson = localStorage.getItem('user');
-  if (userJson) {
-    const user = JSON.parse(userJson);
-    if (user?.token) {
-      config.headers.Authorization = `Bearer ${user.token}`;
-    }
+api.interceptors.request.use(async (config) => {
+  const { user } = await getFromStorage('user');
+  if (user?.token) {
+    config.headers.Authorization = `Bearer ${user.token}`;
   }
   return config;
 });

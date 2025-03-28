@@ -101,11 +101,10 @@ const addTweetBackspaceListener = () => {
     if (!editor) return;
 
     if (event.key === "Backspace") {
-      event.preventDefault();
-
       let currentText = editor.textContent.trim();
 
       if (currentText.length > 0) {
+        event.preventDefault();
         let newText = currentText.slice(0, -1);
         replaceTweetText(newText);
       }
