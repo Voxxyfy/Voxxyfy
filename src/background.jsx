@@ -1,141 +1,89 @@
-import axios from "axios";
-import { SERVER_URL } from "./config";
-import { saveToStorage, getFromStorage } from "./controllers/storageController";
+import { authAPI, userAPI, translationAPI } from './services/api';
+import { saveToStorage, getFromStorage } from './controllers/storageController';
+import { MESSAGE_ACTIONS, STORAGE_KEYS, DEFAULT_SETTINGS } from './constants/actions';
 
 const updateCredits = async (credits) => {
-  const { user } = await getFromStorage("user");
+  const { user } = await getFromStorage(STORAGE_KEYS.USER);
   const userData = user.user;
-  await saveToStorage({ user: { ...user, user: { ...userData, credits } } });
+  await saveToStorage({ 
+    [STORAGE_KEYS.USER]: { 
+      ...user, 
+      user: { ...userData, credits } 
+    } 
+  });
 };
 
 const saveUser = async (data) => {
-  await saveToStorage({ user: data });
+  await saveToStorage({ [STORAGE_KEYS.USER]: data });
 };
 
 const getCredits = async () => {
   try {
-    const { user } = await getFromStorage("user");
-    console.log("USER => ", user);
-    const token = user?.token;
-    if (!token) return;
+    const { user } = await getFromStorage(STORAGE_KEYS.USER);
+    if (!user?.token) return;
 
-    const headers = {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${token}`,
-    };
+    const response = await userAPI.getMe();
+    const { credits } = response;
 
-    const response = await axios.get(SERVER_URL + "/user/me", { headers });
-    console.log("response =>", response.data);
-    const { credits } = response.data;
-
-    if (credits) updateCredits(credits);
+    if (credits) {
+      await updateCredits(credits);
+    }
     return user;
   } catch (error) {
-    if (error.status === 401) return chrome.storage.local.clear();
+    console.error('Error fetching credits:', error);
   }
 };
 
-const getTranslation = async (text, reverse, detectLang) => {
-  return new Promise(async (resolve, reject) => {
-
-    try {
-      const { user, settings } = await getFromStorage(["user", "settings"]);
-      if (!user) return resolve(false);
-      if (!user.token) return resolve(false);
-
-      const authToken = user?.token;
-      const fromLanguage = settings?.translateFrom?.value?.toUpperCase();
-      const toLanguage = settings?.translateTo?.value?.toUpperCase();
-
-      let data = {
-        text,
-        targetLanguage: reverse ? toLanguage || "English" : fromLanguage || "French",
-        sourceLanguage: reverse ? fromLanguage || "French" : toLanguage || "English",
-      };
-
-      if (detectLang) data.sourceLanguage = null;
-
-      const headers = {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${authToken}`,
-      };
-
-      const response = await axios.post(SERVER_URL + "/translate", data, {
-        headers,
-      });
-
-      return resolve(response.data);
-    } catch (error) {
-      console.log("error =>", error);
-      return resolve(error?.response?.data || null);
-    }
-  });
-};
-
-const handleLogin = async (data) => {
-  return new Promise(async (resolve, reject) => {
-    try {
-      const headers = {
-        "Content-Type": "application/json",
-      };
-
-      const response = await axios.post(SERVER_URL + "/auth/login", data, {
-        headers,
-      });
-
-      return resolve(response.data);
-    } catch (error) {
-      resolve(false);
-    }
-  });
-};
-
+// Initialize credits check
 getCredits();
 
+// Set default settings on installation
 chrome.runtime.onInstalled.addListener(() => {
-  const defaultSettings = {
-    translateTo: {
-      value: "fr",
-      label: " French",
-      flag: "https://flagcdn.com/fr.svg",
-    },
-    translateFrom: {
-      value: "en",
-      label: " English",
-      flag: "https://flagcdn.com/us.svg",
-    },
-    extensionOn: true,
-    autoSend: false,
-  };
-
-  saveToStorage({ settings: defaultSettings });
+  saveToStorage({ [STORAGE_KEYS.SETTINGS]: DEFAULT_SETTINGS });
 });
 
+// Handle messages from content scripts
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   (async () => {
-    console.log("request");
     try {
       switch (request.action) {
-        case "GET_TRANSLATION":
-          const response = await getTranslation(
-            request.text,
-            request.reverse,
-            request.detectLang
-          );
-          if (response.remainingCredits)
-            updateCredits(response.remainingCredits);
+        case MESSAGE_ACTIONS.GET_TRANSLATION: {
+          const { text, reverse, detectLang } = request;
+          const { settings } = await getFromStorage(STORAGE_KEYS.SETTINGS);
+          
+          const response = await translationAPI.translate(text, {
+            reverse,
+            detectLang,
+            fromLang: settings?.translateFrom?.value?.toUpperCase(),
+            toLang: settings?.translateTo?.value?.toUpperCase(),
+          });
+
+          if (response?.remainingCredits) {
+            await updateCredits(response.remainingCredits);
+          }
           sendResponse(response);
           break;
-        case "LOGIN":
-          const loginResponse = await handleLogin(request.data);
-          if (loginResponse.token) saveUser(loginResponse);
-          sendResponse(loginResponse);
+        }
+
+        case MESSAGE_ACTIONS.LOGIN: {
+          const response = await authAPI.login(request.data);
+          if (response?.token) {
+            await saveUser(response);
+          }
+          sendResponse(response);
           break;
+        }
+
+        default:
+          console.warn('Unknown message action:', request.action);
+          sendResponse({ error: 'Unknown action' });
       }
     } catch (error) {
-      console.log(error);
+      console.error('Error handling message:', error);
+      sendResponse({ error: error.message });
     }
   })();
 
+  // Return true to indicate we'll respond asynchronously
   return true;
 });

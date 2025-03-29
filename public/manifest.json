@@ -1,1 +1,55 @@
-{"name":"Voxxyfy","version":"1.0.2","description":"Voxxyfy enables seamless, real-time translation for effortless global chats. Break language barriers and connect instantly!","manifest_version":3,"content_scripts":[{"matches":["https://web.telegram.org/*","https://x.com/*","https://web.whatsapp.com/*"],"js":["content.js"],"css":["styles/content.css"]}],"author":"Voxxyfy","action":{"default_popup":"popup.html"},"background":{"service_worker":"background.js"},"icons":{"16":"./assets/icons/16.png","32":"./assets/icons/32.png","48":"./assets/icons/48.png","64":"./assets/icons/64.png","128":"./assets/icons/128.png"},"permissions":["storage"],"web_accessible_resources":[{"resources":["assets/*"],"matches":["https://web.telegram.org/*","https://x.com/*","https://web.whatsapp.com/*"]}],"host_permissions":["https://web.telegram.org/*","https://x.com/*","https://web.whatsapp.com/*"]}
+{
+    "name": "Voxxyfy",
+    "version": "1.0.3",
+    "description": "Voxxyfy enables seamless, real-time translation for effortless global chats. Break language barriers and connect instantly!",
+    "manifest_version": 3,
+    "content_scripts": [
+        {
+            "matches": [
+                "https://web.telegram.org/*",
+                "https://x.com/*",
+                "https://web.whatsapp.com/*"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "css": [
+                "styles/content.css"
+            ]
+        }
+    ],
+    "author": "Voxxyfy",
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "icons": {
+        "16": "./assets/icons/16.png",
+        "32": "./assets/icons/32.png",
+        "48": "./assets/icons/48.png",
+        "64": "./assets/icons/64.png",
+        "128": "./assets/icons/128.png"
+    },
+    "permissions": [
+        "storage"
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "assets/*"
+            ],
+            "matches": [
+                "https://web.telegram.org/*",
+                "https://x.com/*",
+                "https://web.whatsapp.com/*"
+            ]
+        }
+    ],
+    "host_permissions": [
+        "https://web.telegram.org/*",
+        "https://x.com/*",
+        "https://web.whatsapp.com/*"
+    ]
+}

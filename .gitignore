@@ -8,15 +8,15 @@ node_modules/
 /build
 dist.zip
 
-# Testing
-/coverage
-
-# Environment files
+# Environment
 .env
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
+
+# Testing
+/coverage
 
 # Debug logs
 npm-debug.log*

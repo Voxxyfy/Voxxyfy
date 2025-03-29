@@ -1,6 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
+const Dotenv = require('dotenv-webpack');
 
 module.exports = {
   entry: {
@@ -49,12 +50,16 @@ module.exports = {
     extensions: [".js", ".jsx", ".tsx"],
   },
   plugins: [
+    new Dotenv(),
+    new CopyPlugin({
+      patterns: [
+        { from: "public", to: "." },
+        { from: "src/assets", to: "assets" },
+      ],
+    }),
     new HtmlWebpackPlugin({
       template: "./src/popup.html",
       filename: "popup.html",
-    }),
-    new CopyPlugin({
-      patterns: [{ from: "public" }, { from: "src/assets/", to: "assets" }],
     }),
   ],
   target: ["web", "es5"],
