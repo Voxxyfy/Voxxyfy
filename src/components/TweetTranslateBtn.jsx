@@ -4,6 +4,7 @@ import { getFromStorage } from "../controllers/storageController";
 import {
   addListener,
   replaceTweetText,
+  replaceTweetPostText,
   addTweetBackspaceListener,
 } from "../libs/domHandler";
 
@@ -11,7 +12,7 @@ export default function TweetTranslateBtn() {
   const [inputText, setInputText] = useState("");
   const [loading, setLoading] = useState(false);
   const [toLanguage, setToLanguage] = useState({
-    label: "FR 🇩🇪",
+    label: "French 🇫🇷",
     value: "fr",
   });
 
@@ -33,7 +34,7 @@ export default function TweetTranslateBtn() {
       };
       const response = await chrome.runtime.sendMessage(messagePayload);
       if (!response || response?.message) return;
-      replaceTweetText(response.translation);
+      replaceTweetPostText(response.translation);
       tweetInput.style.filter = "none";
 
       setLoading(false);
@@ -82,7 +83,7 @@ export default function TweetTranslateBtn() {
       onClick={handleTranslate}
     >
       <img
-        src={chrome.runtime.getURL("assets/images/32.png")}
+        src={chrome.runtime.getURL("assets/icons/32.png")}
         alt=""
         className={styles.voxxyfyLogo}
       />
